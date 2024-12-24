@@ -1,0 +1,497 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(20, 22, 41, 1);
+  z-index: 1000; /* Ensure navbar stays on top of content */
+  padding: 10px 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4); /* Black border with 40% opacity */
+}
+
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffcc00; /* Hover effect for links */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header Section (Parallax) */
+.header {
+  background-color: #4c5fdf; /* Solid background color */
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  position: relative; /* Change to relative to align child elements properly */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure it stays behind the navbar */
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.header__title {
+  text-align: center; /* Centers the text */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 7em; /* Larger font size for main title */
+  color: #fff;
+  margin: 0; /* Remove unnecessary margins */
+  z-index: 1; /* Ensures text stays above the graphic */
+}
+
+.header__title2 {
+  font-size: 0.4em; /* Smaller font size than main title */
+  font-weight: 400; /* Lighter font weight for subtitle */
+  color: #ccc; /* Lighter color for differentiation */
+  margin-bottom: 15px; /* Adds spacing below the subtitle */
+}
+
+#topOfPage2archiveBoxes {
+  opacity: 30%;
+  width: 50%;
+  position: absolute; /* Allows precise placement */
+  left: 50%; /* Moves the element's left edge to the center */
+  transform: translateX(-50%); /* Offsets the element back by half its width for true centering */
+  top: 18%; /* Positions the graphic near the top of the header */
+  z-index: 0; /* Ensures the image stays behind text */
+}
+
+#teamParallaxBG {
+  opacity: 30%;
+  width: 100%;
+  position: absolute; /* Allows precise placement */
+  left: 50%; /* Moves the element's left edge to the center */
+  transform: translateX(-50%); /* Offsets the element back by half its width for true centering */
+  z-index: 0; /* Ensures the image stays behind text */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Content */
+
+.main {
+  background-color: #4c5fdf;
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  padding-top: 60px; /* Add some space below the navbar */
+}
+
+/* Section Titles and Content */
+.title {
+  font-size: 3em;
+  text-align: center;
+ /* background-color: rgba(23, 23, 23, 1); */
+}
+
+.body-contents {
+  max-width: 95vw;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.grouping1 {
+  display: flex; /* Enable flexbox layout */
+  justify-content: center; /* Center items horizontally in the container */
+  align-items: center; /* Align items vertically in the container */
+
+  width: 100%; /* Ensure the container spans the full width */
+  /* border-top: 10px solid red; */
+}
+
+
+
+#computerOpenBox {
+  max-width: 55%; /* Scale the image to take up an appropriate width */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 45%; /* Initial opacity */
+  transition: opacity 2s ease; /* Smooth transition for opacity change */
+  padding-bottom: 20%;
+  /* border-top: 10px solid purple; */
+}
+
+
+
+
+
+h4 {
+    color: #ffcc00;
+    font-size: 3em;
+    opacity: 0.8;
+    margin-top: -50%;
+    margin-bottom: 5%;
+}
+
+h5 {
+    color: #fff;
+    font-size: 1.8em;
+    text-align: left;
+    text-indent: 0px;
+    line-height: 1em;
+    margin-top: 15%;
+    margin-bottom: 2vw;
+}
+
+.boldWord {
+  font-weight: 700; /* Font weight of 300 */
+    color: #fff;
+}
+
+
+.missionParagraph {
+    color: #bcccff;    
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: left;
+}
+
+
+#YellowLinkEffect {
+  position: relative; /* Allows positioning of the pseudo-element */
+  display: inline-block; /* Makes the element inline to apply the underline effect */
+  transition: color 0.3s ease; /* Smooth transition for text color */
+  text-indent: 2vw; /* Add the text indent to shift the text */
+    
+}
+
+#YellowLinkEffect:hover {
+  color: #ffcc00; /* Change color to #ffcc00 on hover */
+}
+
+/* Create the animated underline */
+#YellowLinkEffect::after {
+  content: ''; /* Required for the pseudo-element */
+  position: absolute;
+  bottom: 0; /* Positions it at the bottom of the text */
+  left: 2vw; /* Start the underline after the text indent */
+  width: 0; /* Initially set the width to 0 */
+  height: 2px; /* Thickness of the underline */
+  background-color: #ffcc00; /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth transition for the underline's width */
+}
+
+/* Animate the underline when hovering */
+#YellowLinkEffect:hover::after {
+  width: calc(100% - 2vw); /* Makes the underline expand to full width minus the indent */
+}
+
+
+
+
+
+
+
+
+.textbox-heading2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 5vw; /* Add space below the heading to separate it from the textboxes */
+  opacity: 0.8;
+}
+
+
+.steps {
+    font-size: 1.75em;
+    text-align: left;
+    line-height: 1.75em;
+}
+
+
+
+
+
+
+
+
+
+
+
+.textbox-heading {
+  font-size: 4em;
+  text-align: center;
+  margin-bottom: 5vw; /* Add space below the heading to separate it from the textboxes */
+  margin-top: 2em;
+    opacity: 0.8;
+}
+
+.textbox-container {
+  display: flex;
+  flex-direction: column; /* Stack the heading and textboxes vertically */
+  justify-content: center; /* Center the textboxes horizontally */
+  align-items: center; /* Center the textboxes vertically */
+  background-color: #bcccff;
+  padding-top: 20%; /* Adjust the top padding */
+  padding-bottom: 20%; /* Adjust the bottom padding */
+  width: 100%; /* Ensure the container spans the full width of the viewport */
+  position: absolute; /* Position it absolutely */
+  left: 0; /* Align to the left edge */
+  right: 0; /* Align to the right edge */
+  border-top: 10px solid #333; /* Dark grey 10px line at the top */
+  border-bottom: 10px solid #333; /* Dark grey 10px line at the top */
+}
+
+.textbox-row {
+  display: flex;
+  justify-content: center; /* Center the textboxes horizontally */
+  gap: 80px; /* Space between textboxes */
+}
+
+.textbox {
+  background-color: #4c5fdf; /* Initial background color */
+  color: white;
+  border-radius: 10%; /* Rounded corners */
+  border: 1px solid #333; /* Dark grey 10px line at the top */
+  width: 25vw; /* Width to make them square */
+  padding-top: 5%;
+  padding-bottom: 3%;
+  text-align: center; /* Center the text inside */
+  font-size: 16px;
+  margin: 0 5%; /* Set margin between textboxes */
+  transition: background-color 0.3s ease; /* Smooth transition for background-color change */
+}
+
+/* Change background color on hover */
+.textbox:hover {
+  background-color: rgb(55, 65, 130); /* Change background color on hover */
+}
+
+
+
+.templateTitle {
+    font-size: 1.5em;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    color: #ffcc00;
+    opacity: 0.9;
+}
+
+#templateArrow {
+    margin-top: 10%;
+    width: 20%;
+}
+
+
+
+
+.templateTitle2 {
+    font-size: 1.25em;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    opacity: 0.9;
+}
+
+
+.textbox-heading2 {
+  font-size: 4em;
+  text-align: center;
+  margin-bottom: 5vw; /* Add space below the heading to separate it from the textboxes */
+}
+
+
+.textbox-row2 {
+  display: flex;
+  justify-content: center; /* Center the textboxes horizontally */
+  gap: 10px; /* Space between textboxes */
+}
+
+.textbox2 {
+  opacity: 0.8;
+  width: 30vw; /* Width to make them square */
+  padding-top: 5%;
+  padding-bottom: 3%;
+  text-align: center; /* Center the text inside */
+  font-size: 16px;
+  margin: 0 5%; /* Set margin between textboxes */
+}
+
+
+.templateDescriptionDetails {
+    line-height: 1.5em;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+/* About-Why HistoriTech */
+
+
+#about-historitech{
+    margin-top: 20%;
+}
+
+#whyPurchaseTitle {
+    margin-top: 10vw;
+    opacity: 0.8;
+    
+}
+
+
+
+
+ul {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #bcccff;
+}
+
+/* Styling for bold keywords */
+.bold-keyword {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #ffcc00;
+    opacity: 0.9;
+}
+
+li {
+    margin-top: 2%;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Meet the Team */
+
+.titleTeam {
+    padding-top: 20vw;
+  margin-bottom: 15vw;
+  font-size: 4em;
+  text-align: center;
+  color: #bcccff;
+}
+
+h2 {
+  font-size: 3em;
+  text-align: center;
+  color: #bcccff;
+}
+
+
+
+#teamMember2 {
+    margin-top:10%;
+    padding-bottom: 10%;
+}
+
+.grouping {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Aligns items vertically */
+  width: 100%;
+  gap: 5%; /* Adds space between .wordBox and .staffPhoto1 */
+
+}
+
+.wordBox {
+  max-width: 50%; /* Limits width to half of the container */
+  text-indent: 2vw;
+  text-align: justify;
+  padding: 2%;
+  line-height: 1.5;
+  /* border: 10px solid #333; */
+}
+
+
+
+.staffPhoto1, .staffPhoto2 {
+  margin: 0; /* Remove unnecessary margins */
+  height: 350px;
+  width: 250px;
+}
+
+
+
+.teamParagraph { 
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+
+
+
+
+
