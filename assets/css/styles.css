@@ -115,6 +115,9 @@ h1 {
 /*------------------------------------------------ Responsive with Mobile Design Priority -----------------------------------------------*/
 #pitch {
   background-color: inherit;
+  display: grid;
+  grid-template-columns; 1fr 1fr;
+  gap: 2em;
 }
 
 #digitizing-pros-list li {
