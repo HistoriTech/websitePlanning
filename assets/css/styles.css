@@ -107,8 +107,8 @@ Teal = #5FA591
   background-color: inherit;
 }
 
-.digitizing-pros-list li {
-  background-color: #DCD6C5;
+.digitizing-pros-list .list-group-item {
+  background: #DCD6C5;
 }
 /*-------------------------------------------------------- END PITCH STYLES -------------------------------------------------------------*/
 
