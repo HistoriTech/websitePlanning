@@ -21,6 +21,10 @@ Teal = #5FA591
   background-color: #DCD6C5;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 /*------------------------------------------------- BEGIN GENERAL CLASSES AND IDS--------------------------------------------------------*/
 /*------------------------------------------------ Responsive with Mobile Design Priority -----------------------------------------------*/
 
