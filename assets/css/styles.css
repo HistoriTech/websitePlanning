@@ -21,6 +21,10 @@ Teal = #5FA591
   background-color: #DCD6C5;
 }
 
+section {
+  margin: 2em 0;
+}
+
 h1 {
   font-family: 'Courier New', Courier, monospace;
 }
