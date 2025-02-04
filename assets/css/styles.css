@@ -19,15 +19,17 @@ Teal = #5FA591
 
 #body {
   background-color: #DCD6C5;
+  font-family: "Playfair Display", serif;
 }
 
 section {
   margin: 2em 0;
 }
-
+/*
 h1 {
   font-family: 'Courier New', Courier, monospace;
 }
+*/
 
 /*------------------------------------------------- BEGIN GENERAL CLASSES AND IDS--------------------------------------------------------*/
 /*------------------------------------------------ Responsive with Mobile Design Priority -----------------------------------------------*/
