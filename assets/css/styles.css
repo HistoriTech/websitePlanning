@@ -10,6 +10,21 @@
   box-sizing: border-box;
 }
 
-body {
+#body {
   background-color: #DCD6C5;
 }
+
+/*------------------------------------------------- BEGIN GENERAL CLASSES AND IDS--------------------------------------------------------*/
+/*------------------------------------------------ Responsive with Mobile Design Priority -----------------------------------------------*/
+
+.hidden { /* Temporarily hide contents */
+  display: none;
+}
+
+.placeholder-img {
+  background-color: #CCCCCC;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+/*-------------------------------------------------------- END GENERAL CLASSES ----------------------------------------------------------*/
