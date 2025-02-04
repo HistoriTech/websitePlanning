@@ -21,10 +21,8 @@
   display: none;
 }
 
-.placeholder-img {
-  background-color: #CCCCCC;
-  max-width: 500px;
-  max-height: 500px;
+.digitizing-pros-list {
+  background-color: #DCD6C5;
 }
 
 /*-------------------------------------------------------- END GENERAL CLASSES ----------------------------------------------------------*/
