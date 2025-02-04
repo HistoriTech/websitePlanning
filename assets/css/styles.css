@@ -28,3 +28,98 @@
 }
 
 /*-------------------------------------------------------- END GENERAL CLASSES ----------------------------------------------------------*/
+/*------------------------------------------------------------ BEGIN NAVBAR -------------------------------------------------------------*/
+/*------------------------------------------------ Responsive with Mobile Design Priority -----------------------------------------------*/
+
+/* <nav class="primary"> --- Navbar container settings */
+.main-nav {
+  background-color: #DCD6C5;  /* Solid background color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px; /* Set height to a known quantity so we can start the header just below it */
+  position: relative;
+  z-index: 100; /* Ensures navbar stays on top of all other content */
+  color: #000000;
+  padding: 1rem;
+}
+
+/* Settings for links within the navbar container */
+.main-nav a {
+  text-decoration: none; /* Removes hyperlink underline */
+  padding: 1em; /* Space between the edge of the "a" element and the link text */
+  color: #000000;
+  transition: color 0.3s; /* Hover effect to change navbar link color */
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Link hover settings */
+.main-nav a:hover {
+  color: #5FA591; /* Text color */
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.main-nav-links {
+  display: none; /* Hidden by default for mobile */
+  flex-direction: column; /* Stack links on mobile */
+  list-style: none;
+  padding: 1rem;
+  background-color: inherit;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+}
+
+.main-nav-links.show {
+  display: flex;
+}
+
+.main-nav-links li {
+  text-align: center;
+  padding: 0.5em;
+}
+
+/*-------------------------------------------------------- END NAVBAR STYLES ------------------------------------------------------------*/
+
+
+
+
+
+/* ------------------------------------------------------- BEGIN DESKTOP CSS STYLES ---------------------------------------------------- */
+@media (min-width: 1024px) {
+  /*------------------------- NAVBAR -------------------------*/
+  .main-nav {
+    flex-direction:column;
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    display: none; /* Hide link and menu toggle on desktop */
+  }
+
+  .main-nav-links {
+    display: flex; /* Show links in a row */
+    flex-direction: row;
+    position: static;
+    width: auto;
+    padding: 0;
+  }
+
+  .main-nav-links li {
+    text-align: left;
+    width: auto;
+    padding: 0;
+  }
+
+  /*------------------------- BODY -------------------------*/
+
+}
+/* ------------------------------------------------------- END DESKTOP CSS STYLES ------------------------------------------------------ */
