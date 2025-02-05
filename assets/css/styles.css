@@ -110,6 +110,7 @@ span.underline-effect:hover::after {
 }
 
 .page-header h1 { /* Settings for Primary headings (<h1>) within the header-textbox container */
+    font-family: "Ubuntu", sans-serif;
     font-size: 3.5em;
     font-weight: bold;
     margin: 0;
@@ -134,10 +135,6 @@ span.underline-effect:hover::after {
     min-height: inherit;
     background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent overlay for better readability */
     color:#000000;
-}
-
-#header-text {
-    font-family: "Ubuntu", sans-serif;
 }
 /*-------------------------------------------------------- END PAGE HEADER STYLES -------------------------------------------------------*/
 /*------------------------------------------------------------ BEGIN NAVBAR -------------------------------------------------------------*/
