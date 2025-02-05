@@ -135,6 +135,10 @@ span.underline-effect:hover::after {
     background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent overlay for better readability */
     color:#000000;
 }
+
+#header-text {
+    font-family: "Ubuntu", sans-serif;
+}
 /*-------------------------------------------------------- END PAGE HEADER STYLES -------------------------------------------------------*/
 /*------------------------------------------------------------ BEGIN NAVBAR -------------------------------------------------------------*/
 /*------------------------------------------------ Responsive with Mobile Design Priority -----------------------------------------------*/
