@@ -11,145 +11,329 @@ Teal = #5FA591
 */
 
 * { /* Reset CSS */
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #body {
-  background-color: #DCD6C5;
-  font-family: "Playfair Display", serif;
+    font-family: "Lato", sans-serif;
+    color: #000000;
 }
 
+
 section {
-  margin: 3em 0;
+    margin: 3em 0;
 }
-/*
-h1 {
-  font-family: 'Courier New', Courier, monospace;
+
+p {
+    font-size: 1.2em;
+    font-weight: 300;
 }
-*/
+
+span {
+    width: auto;
+}
 
 /*------------------------------------------------- BEGIN GENERAL CLASSES AND IDS--------------------------------------------------------*/
 /*------------------------------------------------ Responsive with Mobile Design Priority -----------------------------------------------*/
+.histori-prefix {
+    -webkit-text-stroke-width: 0.03em;
+    -webkit-text-stroke-color: black;
+    color: #DCAF62;
+}
+
+.tech-suffix {
+    color: #000000;
+}
 
 .hidden { /* Temporarily hide contents */
-  display: none;
+    display: none;
+}
+
+.indented {
+    text-indent: 2em;
+}
+
+.keyword {
+    font-weight: bold;
+    padding: 0 0.3em;
+    background-color: #FFF0D7;
+}
+
+.archive-style {
+    background-color: #DCD6C5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+}
+
+span.underline-effect {
+    position: relative; /* Allows positioning of the pseudo-element */
+    display: inline-block; /* Makes the element inline to apply the underline effect */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+    text-indent: 2em;
+    
+}
+
+span.underline-effect:hover {
+    color: #5FA591; /* Change color to #5FA591 on hover */
+}
+
+/* Create the animated underline */
+span.underline-effect::after {
+    content: ''; /* Required for the pseudo-element */
+    position: absolute;
+    bottom: 0; /* Positions it at the bottom of the text */
+    left: 2em; /* Start the underline after the text indent */
+    width: 0; /* Initially set the width to 0 */
+    height: 2px; /* Thickness of the underline */
+    background-color: #5FA591; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition for the underline's width */
+}
+
+/* Animate the underline when hovering */
+span.underline-effect:hover::after {
+    width: calc(100% - 2em); /* Makes the underline expand to full width minus the indent */
 }
 
 /*-------------------------------------------------------- END GENERAL CLASSES ----------------------------------------------------------*/
+/*-------------------------------------------------------- BEGIN PAGE HEADER STYLES -----------------------------------------------------*/
+/*------------------------------------------------ Responsive with Mobile Design Priority -----------------------------------------------*/
+.page-header {
+    margin-top: 3em;
+    min-height: 100vh;
+    mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, transparent 100%);
+}
+
+.page-header h1 { /* Settings for Primary headings (<h1>) within the header-textbox container */
+    font-size: 4.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.page-header h2 { /* Settings for Secondary headings (<h2>) within the header-textbox container */
+    font-size: 1.4em;
+    margin: 1em 0;
+}
+
+.page-header h3 { /* Styling for the Down Arrow icon */
+    font-size: 2.5em;
+}
+
+#home-page-header {
+    min-height: inherit;
+    background-image: url("../graphics/shelved-archives-room.jpg");
+    background-size: cover;
+}
+
+#header-content {
+    min-height: inherit;
+    background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent overlay for better readability */
+    color:#000000;
+}
+/*-------------------------------------------------------- END PAGE HEADER STYLES -------------------------------------------------------*/
 /*------------------------------------------------------------ BEGIN NAVBAR -------------------------------------------------------------*/
 /*------------------------------------------------ Responsive with Mobile Design Priority -----------------------------------------------*/
 
-/* <nav class="primary"> --- Navbar container settings */
+/* Navbar container settings */
 .main-nav {
-  background-color: #DCD6C5;  /* Solid background color */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px; /* Set height to a known quantity so we can start the header just below it */
-  position: relative;
-  z-index: 100; /* Ensures navbar stays on top of all other content */
-  color: #000000;
-  padding: 1rem;
+    background-color: #DCAF62;  /* Solid background color */
+    height: 3em; /* Set height to a known quantity so we can start the header just below it */
+    position: fixed;
+    top:0;
+    z-index: 100; /* Ensures navbar stays on top of all other content */
+    color: #000000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.main-nav-links {
+    background-color: inherit;
+    display: none; /* Hidden by default for mobile */
+    flex-direction: column; /* Stack links on mobile */
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    margin: 0;
+    padding: 0 0.5em;
+}
+
+.main-nav-links.show {
+    display: flex;
+}
+
+.main-nav-links li {
+    text-align: center;
+    padding: 0.5em;
 }
 
 /* Settings for links within the navbar container */
 .main-nav a {
-  text-decoration: none; /* Removes hyperlink underline */
-  padding: 1em; /* Space between the edge of the "a" element and the link text */
-  color: #000000;
-  transition: color 0.3s; /* Hover effect to change navbar link color */
-  white-space: nowrap; /* Prevents text from wrapping */
+    text-decoration: none; /* Removes hyperlink underline */
+    color: #000000;
+    transition: background-color 0.2s; /* Hover effect to change navbar link color */
+    white-space: nowrap; /* Prevents text from wrapping */
+    padding: 0.5em 1em;
 }
 
 /* Link hover settings */
 .main-nav a:hover {
-  color: #5FA591; /* Text color */
+    background-color: #FFFFFF;
 }
 
 .menu-toggle {
-  background: none;
-  border: none;
-  color: #000000;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.main-nav-links {
-  display: none; /* Hidden by default for mobile */
-  flex-direction: column; /* Stack links on mobile */
-  list-style: none;
-  padding: 1rem;
-  background-color: inherit;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 100%;
-}
-
-.main-nav-links.show {
-  display: flex;
-}
-
-.main-nav-links li {
-  text-align: center;
-  padding: 0.5em;
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /*-------------------------------------------------------- END NAVBAR STYLES ------------------------------------------------------------*/
-/*-------------------------------------------------------- BEGIN NEWS STYLES ------------------------------------------------------------*/
 /*------------------------------------------------ Responsive with Mobile Design Priority -----------------------------------------------*/
-#news {
-  background-color: inherit;
+#news { /* Styles for the news container */
+    height: 50vh;
 }
+
+#news h1 {
+    font-size: 2em;
+}
+
 /*-------------------------------------------------------- END NEWS STYLES --------------------------------------------------------------*/
 /*-------------------------------------------------------- BEGIN MISSION STYLES ---------------------------------------------------------*/
 /*------------------------------------------------ Responsive with Mobile Design Priority -----------------------------------------------*/
-#mission .row {
-  align-items: center;
+#mission { /* Container styles just for mobile */
+    /*display: grid;*/
+    z-index: -1;
 }
+
+#mission .image { /* Settings for the image within mission-container */
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+    z-index: 0;
+}
+
+/* id="mission-content" --- mission-content settings */
+#mission-statement {
+    background: rgba(220, 214, 197, 0.75); /* Add a semi-transparent overlay for better readability */
+    z-index:1;
+}
+
+#mission-statement {
+    line-height: 2.5em;
+}
+
+#mission-statement p {
+    font-weight: 400;
+}
+
+#mission-statement span {
+    font-size: 0.9em;
+}
+
 /*-------------------------------------------------------- END MISSION STYLES -----------------------------------------------------------*/
 /*-------------------------------------------------------- BEGIN PITCH STYLES -----------------------------------------------------------*/
 /*------------------------------------------------ Responsive with Mobile Design Priority -----------------------------------------------*/
 #digitizing-pros-list li {
-  background: #DCD6C5;
-  border: #DCAF62;
+    background-color: #DCD6C5;
+    border: 4px solid white;
+    border-radius: 0;
 }
 
 #why-historitech {
-  margin-top: 3em;
+    margin-top: 3em;
 }
 /*-------------------------------------------------------- END PITCH STYLES -------------------------------------------------------------*/
+/* ------------------------------------------------------- BEGIN RESPONSIVE STYLES ---------------------------------------------------- */
 
-/* ------------------------------------------------------- BEGIN DESKTOP CSS STYLES ---------------------------------------------------- */
-@media (min-width: 1024px) {
-  /*------------------------- NAVBAR -------------------------*/
-  .main-nav {
-    flex-direction:column;
-    justify-content: center;
-  }
+@media (min-width: 576px) { /*------------------------- "sm" Bootstrap Breakpoint -------------------------*/
+    /*------------------------- MISSION -------------------------*/
+    #mission .image { /* Settings for the image within mission-container */
+        max-width: 550px;
+    }
 
-  .menu-toggle {
-    display: none; /* Hide link and menu toggle on desktop */
-  }
+    #mission-statement span {
+        font-size: 1.2em;
+    }
+}
 
-  .main-nav-links {
-    display: flex; /* Show links in a row */
-    flex-direction: row;
-    position: static;
-    width: auto;
-    padding: 0;
-  }
 
-  .main-nav-links li {
-    text-align: left;
-    width: auto;
-    padding: 0;
-  }
+@media (min-width: 768px) { /*------------------------- "md" Bootstrap Breakpoint -------------------------*/
+    /*------------------------- HEADER -------------------------*/
 
-  /*------------------------- BODY -------------------------*/
+    .page-header h1 {
+        font-size: 7em;
+    }
+
+    .page-header h2 { 
+        font-size: 1.6em;
+    }
+
+    .page-header h3 {
+        font-size: 3em;
+    }
+
+    /*------------------------- NAVBAR -------------------------*/
+    .menu-toggle {
+        display: none; /* Hide link and menu toggle on desktop */
+    }
+
+    .main-nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+    }
+
+    /*------------------------- NEWS -------------------------*/
+    #news h1 {
+        font-size: 3em;
+    }
+
+    #news p {
+        font-size: 1.5em;
+    }
+
+    /*------------------------- MISSION -------------------------*/
+    #mission .image { /* Settings for the image within mission-container */
+        max-width: 540px;
+    }
+}
+
+
+@media (min-width: 992px) {  /*------------------------- "lg" Bootstrap Breakpoint -------------------------*/
+    /*------------------------- MISSION -------------------------*/
+    #mission-statement { /* Settings for the image within mission-container */
+        width: auto;
+    }
+}
+
+
+
+@media (min-width: 1200px) {  /*------------------------- "xl" Bootstrap Breakpoint -------------------------*/
+    /*------------------------- MISSION -------------------------*/
+    /* id="mission-content" --- mission-content settings */
+    #mission-statement {
+        width: 50%;
+        background: none;
+    }
+
+    #mission .image { /* Settings for the image within mission-container */
+        position: relative;
+    }
 
 }
-/* ------------------------------------------------------- END DESKTOP CSS STYLES ------------------------------------------------------ */
+
+/*
+@media (min-width: 1400px) {  /*------------------------- "xxl" Bootstrap Breakpoint ------------------------*
+
+}
+*/
+/* ------------------------------------------------------- END RESPONSIVE STYLES ------------------------------------------------------ */
